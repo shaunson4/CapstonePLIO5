@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Office
+from .models import Office_details
 
 class OfficeSerializer(serializers.ModelSerializer):
 
-    class Office:
-        model = Office
-        fields = ['name', 'lati', 'longi']
+    class Office_details:
+        model = Office_details
+        fields = ['buildingName', 'address', 'lati', 'longi']
