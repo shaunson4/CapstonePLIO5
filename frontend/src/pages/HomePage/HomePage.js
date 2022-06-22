@@ -1,9 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import NewOfficeLocation from "../OfficeDetails/AddOfficeLocationPage";
 import NewProposalForm from "../OfficeDetails/ProposalForm";
+import { Link } from "react-router-dom";
 
-import axios from "axios";
+import axios from "axios"
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -12,6 +14,7 @@ const HomePage = () => {
   const [user, token] = useAuth();
   const [cars, setCars] = useState([]);
   const [offices, setOffices] = useState([]);
+  const [proposals, setProposals] = useState([]);
 
   useEffect(() => {
     const fetchOffices = async () => {
@@ -31,14 +34,18 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
-      {cars &&
-        cars.map((car) => (
-          <p key={car.id}>
-            {car.year} {car.model} {car.make}
+      <Link to="addofficelocation">Add Office Location!</Link>
+      <Link to="/addproposal">Add Proposal!</Link>
+
+      {offices &&
+        offices.map((office) => (
+          <p key={office.id}>
+            {office.buildingName} {office.address} {office.lati} {office.longi}
           </p>
         ))}
-
+        <NewOfficeLocation/>
         <NewProposalForm/>
+        <Map location={location} zoomLevel={17} offices={offices} />
     </div>
   );
 };

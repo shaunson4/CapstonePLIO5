@@ -4,5 +4,6 @@ from office import views
 
 urlpatterns = [
     path("alloffices", views.get_all_offices),
-    path('proposal_form', views.Proposals_form, name = 'ProposalForm'),
+    path("addoffice", views.user_offices),
+    # path('proposal_form', views.Proposals_form, name = 'ProposalForm'),
 ]

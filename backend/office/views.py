@@ -33,5 +33,5 @@ def user_offices(request):
         serializer = OfficeSerializer(offices, many=True)
         return Response(serializer.data)
 
-def Proposals_form():
+# def Proposals_form():
     return HttpResponse("hello")
