@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import NewOfficeLocation from "../OfficeDetails/AddOfficeLocationPage";
-import NewProposalForm from "../OfficeDetails/ProposalForm";
+import Map from "../../components/Map/Map";
+// import NewOfficeLocation from "../OfficeDetails/AddOfficeLocationPage";
+// import NewProposalForm from "../OfficeDetails/ProposalForm";
 import { Link } from "react-router-dom";
 
 import axios from "axios"
@@ -34,18 +35,19 @@ const HomePage = () => {
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
-      <Link to="addofficelocation">Add Office Location!</Link>
-      <Link to="/addproposal">Add Proposal!</Link>
+      <Map/>
+      {/* <Link to="addofficelocation">Add Office Location!</Link>
+      <Link to="/addproposal">Add Proposal!</Link> */}
 
-      {offices &&
+      {/* {offices &&
         offices.map((office) => (
           <p key={office.id}>
             {office.buildingName} {office.address} {office.lati} {office.longi}
-          </p>
-        ))}
-        <NewOfficeLocation/>
-        <NewProposalForm/>
-        <Map location={location} zoomLevel={17} offices={offices} />
+          </p> */}
+        {/* ))} */}
+        {/* <NewOfficeLocation/>
+        // <NewProposalForm/> */}
+        {/* <Map location={location} zoomLevel={17} offices={offices} /> */}
     </div>
   );
 };

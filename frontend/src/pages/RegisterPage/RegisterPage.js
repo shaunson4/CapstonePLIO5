@@ -7,7 +7,7 @@ const RegisterPage = () => {
   const defaultValues = {
     username: "",
     email: "",
-    is_manager: "",
+    manager: "",
     password: "",
     firstName: "",
     lastName: "",
@@ -60,8 +60,8 @@ const RegisterPage = () => {
           Customer/Manager:{" "}
           <input
             type="text"
-            name="is_manager"
-            value={formData.is_manager}
+            name="manager"
+            value={formData.manager}
             onChange={handleInputChange}
           />
         </label>

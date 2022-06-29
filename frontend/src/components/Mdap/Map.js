@@ -9,10 +9,10 @@ import {
 
 const geoUrl =
 "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
- console.log(offices)
+
 const markers = [
 
-{ markerOffset: 15, name: office.buildingName, coordinates: [office.lati, parseFloat(office.longi)] },
+{ markerOffset: 15, name: "Office 1", coordinates: [-68.1193, -16.4897] },
 { markerOffset: 15, name: "Office 2", coordinates: [-47.8825, -15.7942] },
 { markerOffset: 15, name: "Office 3", coordinates: [-70.6693, -33.4489] },
 { markerOffset: 15, name: "Office 4", coordinates: [-74.0721, 4.711] }

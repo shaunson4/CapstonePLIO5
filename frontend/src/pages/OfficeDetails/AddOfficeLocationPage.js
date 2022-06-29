@@ -23,7 +23,7 @@ const AddOfficeLocation = () => {
             let response = await axios.post("http://127.0.0.1:8000/api/office/addoffice", formData,{
                 headers: {
                     Authorization: 'Bearer ' + token
-                })
+                }})
                 navigate("/")
         } catch (error) {
             console.log(error.message)

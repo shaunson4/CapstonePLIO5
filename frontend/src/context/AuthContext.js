@@ -32,6 +32,7 @@ export const AuthProvider = ({ children }) => {
       let finalData = {
         username: registerData.username,
         password: registerData.password,
+        manager: registerData.manager=="manager" ?true:false,
         email: registerData.email,
         first_name: registerData.firstName,
         last_name: registerData.lastName,
